@@ -27,7 +27,7 @@ intel_drivers := i915 i965 i915g ilo
 radeon_drivers := r300g r600g
 rockchip_drivers := rockchip
 nouveau_drivers := nouveau
-pipe_drivers := freedreno virgl vmwgfx
+pipe_drivers := freedreno virgl vmwgfx vc4
 
 valid_drivers := \
 	prebuilt \
@@ -119,10 +119,10 @@ LOCAL_SRC_FILES += gralloc_drm_pipe.c
 LOCAL_CFLAGS += -DENABLE_PIPE -DDMABUF
 LOCAL_CONLYFLAGS += -std=c99
 LOCAL_C_INCLUDES += \
-	external/mesa3d/include \
-	external/mesa3d/src \
-	external/mesa3d/src/gallium/include \
-	external/mesa3d/src/gallium/auxiliary
+	external/mesa/include \
+	external/mesa/src \
+	external/mesa/src/gallium/include \
+	external/mesa/src/gallium/auxiliary
 
 LOCAL_STATIC_LIBRARIES += \
 	libmesa_gallium \
@@ -144,7 +144,7 @@ LOCAL_SHARED_LIBRARIES := \
 	liblog \
 	libutils
 
-LOCAL_MODULE := gralloc.drm
+LOCAL_MODULE := gralloc.rpi2b
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_RELATIVE_PATH := hw
 include $(BUILD_SHARED_LIBRARY)
