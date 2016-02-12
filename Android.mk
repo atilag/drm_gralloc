@@ -85,7 +85,7 @@ include $(CLEAR_VARS)
 LOCAL_MODULE := libgralloc_drm
 LOCAL_MODULE_TAGS := optional
 
-LOCAL_CFLAGS := -std=c99
+LOCAL_CFLAGS := -std=c99 -g -O0
 
 LOCAL_SRC_FILES := \
 	gralloc_drm.c \
@@ -168,7 +168,7 @@ LOCAL_SHARED_LIBRARIES := \
 LOCAL_SHARED_LIBRARIES += \
 	libGLESv1_CM
 
-LOCAL_MODULE := gralloc.drm
+LOCAL_MODULE := gralloc.rpi2b
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_RELATIVE_PATH := hw
 include $(BUILD_SHARED_LIBRARY)
